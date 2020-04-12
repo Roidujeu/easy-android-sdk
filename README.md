@@ -69,8 +69,6 @@ $ rm -rf /usr/bin/marvin
 * [ Govind K ](https://github.com/Roidujeu/)
 * [ Angad Sharma ](https://github.com/L04DB4L4NC3R/)
 
-
-
 <br>
 <br>
 
