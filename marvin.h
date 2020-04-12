@@ -1,0 +1,1 @@
+#define GRAY 50
