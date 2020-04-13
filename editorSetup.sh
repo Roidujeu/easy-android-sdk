@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See LICENSE file for copyright and license details.
+
 case $1 in
 	a)
 		echo "This plugin requires the following: >=JDK 1.8, >=Vim 7.1, Eclipse 4.8.x, Python 2.7 or 3.x, make, and gcc."

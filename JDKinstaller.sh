@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See LICENSE file for copyright and license details.
+
 if [ -d "$1" ]
 then
 	ping -qc 1 www.google.com > /dev/null 

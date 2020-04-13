@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# See LICENSE for license details.
+
 if [ -d $1 ]
 then
 	cd $1
