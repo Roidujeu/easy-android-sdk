@@ -49,6 +49,13 @@ $ make clean
 ```bash
 $ cc marvin.c -o marvin -lncurses -lpanel
 $ cp marvin /usr/bin 
+$ mkdir -p /usr/share/marvin
+$ mkdir -p /usr/share/marvin/scripts
+$ mkdir -p /usr/share/marvinl/icense
+$ cp ASDKinstaller.sh /usr/share/marvin/scripts
+$ cp JDKinstaller.sh /usr/share/marvin/scripts
+$ cp editorSetup.sh /usr/share/marvin/scripts
+$ cp LICENSE /usr/share/marvin/license
 ```  
 
 * Execute instructions  
