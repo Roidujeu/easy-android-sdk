@@ -16,8 +16,16 @@ case $1 in
 			read
 			exit 1
 		fi
-		echo "Downloading required components for vim....."
-		curl -o eclim.bin "https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin"
+		echo "Enter the directory where the necessary files have to be downloaded:"
+		read dnldLoc
+		if [ -d $dnldLoc  ]
+		then
+			echo "Downloading required components for vim....."
+			curl -o eclim.bin "https://github.com/ervandew/eclim/releases/download/2.8.0/eclim_2.8.0.bin"
+		else
+			echo "Couldn't download Eclim. Press Enter/Return to exit."
+			exit 1
+		fi
 		if [ $? -eq 0 ]
 		then
 			./eclim.bin
