@@ -288,6 +288,8 @@ void initwelcomeWin(int totrs, int totcols) {
 
 void initJDKWin(int totrs, int totcols) {
 	int ynch;
+	char * JDKloc;
+	char * fullJDKStuff
 	drawTitle(JDKWindow, totrs, totcols);
 	if(jdkInstalled != 0 ){
 		def_prog_mode();
@@ -297,8 +299,8 @@ void initJDKWin(int totrs, int totcols) {
 		refresh();
 	}
 	if(jdkInstalled != 0) {
-		char * JDKloc = malloc(sizeof(char) * 256);
-		char * fullJDKStuff = malloc(sizeof(char) * 500);
+		JDKloc = malloc(sizeof(char) * 256);
+		fullJDKStuff = malloc(sizeof(char) * 500);
 		wattron(JDKWindow,COLOR_PAIR(3));
 		wattron(JDKWindow,A_BOLD);
 		mvwprintw(JDKWindow,totrs/2,totcols/7,"%s","JDK is not installed in this system.");
@@ -312,7 +314,7 @@ void initJDKWin(int totrs, int totcols) {
 		noecho();
 		curs_set(0);
 		wrefresh(JDKWindow);
-		sprintf(fullJDKStuff,"/bin/bash ./JDKinstaller.sh %256s",JDKloc);
+		sprintf(fullJDKStuff,"/bin/bash /usr/share/marvin/scripts/JDKinstaller.sh %256s",JDKloc);
 		def_prog_mode();
 		endwin();
 		if(system(fullJDKStuff) == 0) {
@@ -417,7 +419,7 @@ void initJDKWin(int totrs, int totcols) {
 void initASDKWin(int totrs, int totcols) {
 	char lit;
 	char * SDKMcom;
-	char * fullASDKStuff = malloc(sizeof(char) * 500);
+	char * fullASDKStuff;
 	char * toolName;
 	
 	drawTitle(ASDKWindow, totrs, totcols);
@@ -434,7 +436,8 @@ void initASDKWin(int totrs, int totcols) {
 		ASDKloc = malloc(sizeof(char) * 256);
 		wscanw(ASDKWindow, "%256s", ASDKloc);
 		drawControls(ASDKWindow, totrs, totcols, 'a');
-		sprintf(fullASDKStuff, "/bin/bash ./ASDKinstaller.sh %256s",ASDKloc);
+		fullASDKStuff = malloc(sizeof(char) * 500);
+		sprintf(fullASDKStuff, "/bin/bash /usr/share/marvin/scripts/ASDKinstaller.sh %256s",ASDKloc);
 		curs_set(0);
 		noecho();
 		wrefresh(ASDKWindow);
@@ -929,8 +932,8 @@ void initeditorsetupWin(int totrs, int totcols) {
 				break;
 			case 'a':
 			case 'c':
-				editorsetupSh = malloc(sizeof(char) * 30);
-				sprintf(editorsetupSh, "/bin/bash ./editorSetup.sh %c", cho);
+				editorsetupSh = malloc(sizeof(char) * 100);
+				sprintf(editorsetupSh, "/bin/bash /usr/share/marvin/scripts/editorSetup.sh %c", cho);
 				def_prog_mode();
 				endwin();
 				if(system(editorsetupSh) == 0) {
