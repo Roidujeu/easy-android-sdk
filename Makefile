@@ -39,9 +39,17 @@ install: all
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f ${NAME} ${DESTDIR}${PREFIX}/bin
 	@chmod 755 ${DESTDIR}${PREFIX}/bin/${NAME}
+	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin
+	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin/scripts
+	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin/license
+	@install ASDKinstaller.sh ${DESTDIR}${PREFIX}/share/marvin/scripts
+	@install JDKinstaller.sh ${DESTDIR}${PREFIX}/share/marvin/scripts
+	@install editorSetup.sh ${DESTDIR}${PREFIX}/hare/marvin/scripts
+	@install LICENSE ${DESTDIR}${PREFIX}/share/marvin/license
 
 uninstall:
 	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
 	@rm -f ${DESTDIR}${PREFIX}/bin/${NAME}
+	@rm -f ${DESTDIR}${PREFIX}/share/marvin
 
 .PHONY: all options clean dist install uninstall
