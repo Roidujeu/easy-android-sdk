@@ -298,7 +298,7 @@ void initJDKWin(int totrs, int totcols) {
 	}
 	if(jdkInstalled != 0) {
 		char * JDKloc = malloc(sizeof(char) * 256);
-		char * fullJDKStuff = malloc(sizeof(char) * 286);
+		char * fullJDKStuff = malloc(sizeof(char) * 500);
 		wattron(JDKWindow,COLOR_PAIR(3));
 		wattron(JDKWindow,A_BOLD);
 		mvwprintw(JDKWindow,totrs/2,totcols/7,"%s","JDK is not installed in this system.");
@@ -417,7 +417,7 @@ void initJDKWin(int totrs, int totcols) {
 void initASDKWin(int totrs, int totcols) {
 	char lit;
 	char * SDKMcom;
-	char * fullASDKStuff = malloc(sizeof(char) * 286);
+	char * fullASDKStuff = malloc(sizeof(char) * 500);
 	char * toolName;
 	
 	drawTitle(ASDKWindow, totrs, totcols);
