@@ -289,7 +289,7 @@ void initwelcomeWin(int totrs, int totcols) {
 void initJDKWin(int totrs, int totcols) {
 	int ynch;
 	char * JDKloc;
-	char * fullJDKStuff
+	char * fullJDKStuff;
 	drawTitle(JDKWindow, totrs, totcols);
 	if(jdkInstalled != 0 ){
 		def_prog_mode();
