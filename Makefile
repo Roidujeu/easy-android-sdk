@@ -44,7 +44,7 @@ install: all
 	@mkdir -p ${PREFIX}/share/marvin/license
 	@install ASDKinstaller.sh ${PREFIX}/share/marvin/scripts
 	@install JDKinstaller.sh ${PREFIX}/share/marvin/scripts
-	@install editorSetup.sh ${PREFIX}/hare/marvin/scripts
+	@install editorSetup.sh ${PREFIX}/share/marvin/scripts
 	@install LICENSE ${PREFIX}/share/marvin/license
 
 uninstall:
