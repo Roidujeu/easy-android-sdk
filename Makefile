@@ -35,21 +35,21 @@ dist: clean
 	@rm -rf ${NAME}-${VERSION}
 
 install: all
-	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
-	@mkdir -p ${DESTDIR}${PREFIX}/bin
-	@cp -f ${NAME} ${DESTDIR}${PREFIX}/bin
-	@chmod 755 ${DESTDIR}${PREFIX}/bin/${NAME}
-	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin
-	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin/scripts
-	@mkdir -p ${DESTDIR}${PREFIX}/share/marvin/license
-	@install ASDKinstaller.sh ${DESTDIR}${PREFIX}/share/marvin/scripts
-	@install JDKinstaller.sh ${DESTDIR}${PREFIX}/share/marvin/scripts
-	@install editorSetup.sh ${DESTDIR}${PREFIX}/hare/marvin/scripts
-	@install LICENSE ${DESTDIR}${PREFIX}/share/marvin/license
+	@echo installing executable file to $${PREFIX}/bin
+	@mkdir -p ${PREFIX}/bin
+	@cp -f ${NAME} ${PREFIX}/bin
+	@chmod 755 ${PREFIX}/bin/${NAME}
+	@mkdir -p ${PREFIX}/share/marvin
+	@mkdir -p ${PREFIX}/share/marvin/scripts
+	@mkdir -p ${PREFIX}/share/marvin/license
+	@install ASDKinstaller.sh ${PREFIX}/share/marvin/scripts
+	@install JDKinstaller.sh ${PREFIX}/share/marvin/scripts
+	@install editorSetup.sh ${PREFIX}/hare/marvin/scripts
+	@install LICENSE ${PREFIX}/share/marvin/license
 
 uninstall:
-	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
-	@rm -f ${DESTDIR}${PREFIX}/bin/${NAME}
-	@rm -f ${DESTDIR}${PREFIX}/share/marvin
+	@echo removing executable file from ${PREFIX}/bin
+	@rm -f ${PREFIX}/bin/${NAME}
+	@rm -f ${PREFIX}/share/${NAME}
 
 .PHONY: all options clean dist install uninstall
