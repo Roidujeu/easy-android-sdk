@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# See LICENSE for license details.
+# See LICENSE file for copyright and license details.
 
 if [ -d $1 ]
 then
