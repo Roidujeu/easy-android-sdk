@@ -72,6 +72,7 @@ $ make uninstall
  without make,  
 ```bash
 $ rm -rf /usr/bin/marvin
+$ rm -rf /usr/share/marvin
 ```  
 ## Contributors
 
