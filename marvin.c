@@ -249,7 +249,7 @@ void drawControls(WINDOW * updWin, int totrs, int totcols, char wch) {
 void initwelcomeWin(int totrs, int totcols) {
 	drawTitle(welcomeWindow, totrs, totcols);
 
-	mvwprintw(welcomeWindow, (totrs/2)-2, (totcols - 30)/2, "%s", "Welcome to Easy Android Setup.");
+	mvwprintw(welcomeWindow, (totrs/2)-2, (totcols - 18)/2, "%s", "Welcome to Marvin.");
 	mvwprintw(welcomeWindow, (totrs/2)-1, (totcols - 60)/2, "%s", "These are the things which this wizard will help you set up.");
 	wattron(welcomeWindow,COLOR_PAIR(1));
 	wattron(welcomeWindow,A_BOLD);
