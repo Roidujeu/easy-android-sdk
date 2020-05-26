@@ -851,7 +851,7 @@ void initeditorsetupWin(int totrs, int totcols) {
 		mvwprintw(editorsetupWindow, (totrs/2)+1, (totcols/7), "%s", "c. Eclipse");
 		wattroff(editorsetupWindow, COLOR_PAIR(6));
 		wattron(editorsetupWindow, COLOR_PAIR(5));
-		mvwprintw(editorsetupWindow, (totrs/2)+2, (totcols/7), "%s", "Editor you intend to use(a-b)");
+		mvwprintw(editorsetupWindow, (totrs/2)+2, (totcols/7), "%s", "Editor you intend to use(a-c)");
 		wattroff(editorsetupWindow, COLOR_PAIR(5));
 		wattron(editorsetupWindow, COLOR_PAIR(4));
 		mvwprintw(editorsetupWindow, (totrs/2)+2, (totcols/7)+29, "%s", " / ");
